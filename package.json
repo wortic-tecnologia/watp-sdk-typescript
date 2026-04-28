@@ -1,0 +1,37 @@
+{
+  "name": "@watp/sdk-typescript",
+  "version": "0.1.0",
+  "description": "Minimal TypeScript SDK for the current WATP real contract.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "conformance": "npm run build && node ../../scripts/watp-sdk-conformance-typescript.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "watp",
+    "sdk",
+    "typescript",
+    "protocol"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}
